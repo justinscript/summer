@@ -41,7 +41,7 @@ public class AutoConfig {
 
     public static void main(String[] args) {
         if (args.length < 2) {
-            System.out.println("ERROR! please check args. example: java com.yue.commons.autoconfig.AutoConfig propertiesPath autoConfigPath !");
+            System.out.println("ERROR! please check args. example: java com.ms.commons.autoconfig.AutoConfig propertiesPath autoConfigPath !");
             throw new Error("args is error !");
         }
 
