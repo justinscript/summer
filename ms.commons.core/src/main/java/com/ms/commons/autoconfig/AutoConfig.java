@@ -47,7 +47,7 @@ public class AutoConfig {
 
         String propertiesPath = args[0];
         String autoConfigPath = args[1];
-        String s = System.getProperty("yueji.autoconfig.debug");
+        String s = System.getProperty("msun.autoconfig.debug");
         if (s != null && s.equalsIgnoreCase("true")) {
             isDebug = true;
         }
