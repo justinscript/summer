@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.ms.shared</groupId>
+	<artifactId>ms.commons.web</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+	<name>ms commons web</name>
+	<url>http://maven.apache.org</url>
+
+	<parent>
+		<groupId>com.ms.base</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../../base-parent</relativePath>
+	</parent>
+
+	<dependencies>
+		<!-- 依赖的三方库 -->
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+		</dependency>
+        <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+           <artifactId>jackson-core</artifactId>
+           <version>1.8.5</version>
+        </dependency>
+        <dependency>
+           <groupId>org.codehaus.jackson</groupId>
+           <artifactId>jackson-mapper</artifactId>
+           <version>1.8.5</version>
+        </dependency>
+        <dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>sourceforge.spring.mock</artifactId>
+		</dependency>
+        <dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>xml.jdom</artifactId>
+		</dependency>
+		<!-- 依赖的二方库 -->
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.cookie</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.db</artifactId>
+			<version>1.0.0</version>
+		</dependency> 
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.udas</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.summer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+		
+	<build>
+	</build>
+</project>

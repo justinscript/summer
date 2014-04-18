@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="handlerAdapter"
+		class="com.ms.commons.summer.web.handler.ComponentMethodHandlerAdapter">
+	</bean>
+
+	<!-- 多文件上传的Resolver -->
+	<bean id="multipartResolver"
+		class="com.ms.commons.summer.web.multipart.CommonsMultipartEngancedResolver">
+		<property name="maxUploadSize">
+			<!-- 修改为25M -->
+			<value>25971520</value>
+		</property>
+		<property name="defaultEncoding">
+			<value>utf-8</value>
+		</property>
+	</bean>
+	<!-- 视图解析器 -->
+	<bean name="velocityConfig"
+		class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/vm" />
+		<property name="velocityProperties">
+			<props>
+				<prop key="input.encoding">UTF-8</prop>
+				<prop key="output.encoding">UTF-8</prop>
+				<prop key="directive.set.null.allowed">true</prop>
+				<prop key="directive.if.tostring.nullcheck">false</prop>
+				<!-- 上线使用时需要设置cache -->            
+				<prop key="velocimacro.library">headquarters/security/securitymacro.vm</prop>
+				<prop key="eventhandler.referenceinsertion.class">
+					com.ms.commons.summer.security.velocity.SummerReferenceInsertionEventHandler
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="viewResolver"
+		class="com.ms.commons.summer.web.view.velocity.SummerVelocityLayoutViewResolver">
+		<property name="cache" value="false" />
+		<property name="suffix" value=".vm" />
+		<property name="contentType" value="text/html;charset=utf-8" />
+		<property name="screenContentKey" value="body" />
+	</bean>
+	
+	<!-- 异常处理 -->
+	<bean name="exceptionResolver"
+		class="com.ms.commons.summer.web.handler.ComponentMappingExceptionResolver">
+		<property name="defaultErrorView" value="/error/404.vm" />
+		<!-- 
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.Exception">/error/404.vm</prop>
+				<prop key="java.lang.NumberFormatException">/error/null.vm</prop>
+			</props>
+		</property>
+		 -->
+	</bean>
+	
+</beans>

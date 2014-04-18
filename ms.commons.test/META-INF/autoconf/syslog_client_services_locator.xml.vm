@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<services>
+		<service name="syslogClientServicesLocator" class="com.ms.service.spring.DefaultBeanFactoryService">
+			<property name="bean.descriptors">
+			</property>
+		</service>
+
+	</services>
+</configuration>

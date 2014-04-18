@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	  <modelVersion>4.0.0</modelVersion>
+	  <groupId>com.ms.shared</groupId>
+	  <artifactId>ms.commons.security</artifactId>
+	  <packaging>jar</packaging>
+	  <version>1.0.0</version>
+	  <name>commons security</name>
+	  <url>http://maven.apache.org</url>
+	  
+	   <parent>
+	    <groupId>com.ms.base</groupId>
+	    <artifactId>parent</artifactId>
+	    <version>1.0.0</version>
+	    <relativePath>../../base-parent</relativePath>
+	  </parent>
+	  
+	  <dependencies>
+	  	  	<!-- 依赖的三方库 -->
+		  	<dependency>
+		  		<groupId>com.ms.external</groupId>
+		  		<artifactId>jakarta.commons.configuration</artifactId>
+			</dependency>
+			<dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>jakarta.commons.lang</artifactId>
+			</dependency>	
+			<dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>jakarta.commons.codec</artifactId>
+			</dependency>
+			<dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>java.jce.cryptix</artifactId>
+			</dependency>
+			<dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>jakarta.log4j</artifactId>
+			</dependency>
+			<dependency>
+			  	<groupId>commons-logging</groupId>
+			  	<artifactId>commons-logging</artifactId>
+			</dependency>
+			<dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>jakarta.commons.collections</artifactId>
+			</dependency>
+			<!-- <dependency>
+			  	<groupId>com.ms.external</groupId>
+			  	<artifactId>test.junit</artifactId>
+			</dependency> -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+			</dependency>
+			<!-- 依赖的二方库 -->
+			<dependency>
+				<groupId>com.ms.shared</groupId>
+				<artifactId>ms.commons.core</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+	  </dependencies>
+	  
+	  <build>
+	    <finalName>commons.security</finalName>
+	  </build>
+</project>

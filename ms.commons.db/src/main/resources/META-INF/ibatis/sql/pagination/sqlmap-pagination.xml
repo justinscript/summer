@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd" >
+<sqlMap namespace="PAGINATION">
+	<!-- Oracle分页 -->
+	<sql id="paginationStart">
+			<![CDATA[
+	   select * from (select row_.*, rownum rownum_ from (
+	  ]]>
+		</sql>
+		<sql id="paginationEnd">
+			<![CDATA[
+	   )row_ where rownum <= #endRecordIndex# ) where rownum_ >= #startRecordIndex#
+	  ]]>
+	</sql>
+	
+	<!-- MySql分页 -->
+	<sql id="MYSQL_PAGINATION">
+		LIMIT #mySqlStartRecordIndex#, #pageSize#
+	</sql>
+</sqlMap>

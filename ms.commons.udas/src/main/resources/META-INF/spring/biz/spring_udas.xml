@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="byName" default-lazy-init="false" default-dependency-check="none">
+	
+
+
+	<bean id="dataSourceParent" class="com.ms.commons.udas.impl.UdasServiceImpl" abstract="true" />
+
+	<bean id="htmlDataSource" parent="dataSourceParent" init-method="init" destroy-method="close">
+		<constructor-arg value="remote_memcached"/>
+		<constructor-arg value="html" />
+		<constructor-arg value="SA_memcached.url" />
+	</bean>
+
+	<bean id="webTestDataSource" parent="dataSourceParent" init-method="init" destroy-method="close">
+		<constructor-arg value="remote_memcached"/>
+		<constructor-arg value="webtest" />
+		<constructor-arg value="SA_webtest.memcached.url" />
+	</bean>
+
+	<bean id="commonDataSource" parent="dataSourceParent" init-method="init" destroy-method="close">
+		<constructor-arg value="remote_memcached"/>
+		<constructor-arg value="common" />
+		<constructor-arg value="SA_webtest.memcached.url" />
+	</bean>
+
+	
+</beans>

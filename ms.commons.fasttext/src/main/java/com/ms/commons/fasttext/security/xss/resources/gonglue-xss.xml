@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xss>
+    <directives>
+        <directive name="maxInputSize" value="1000000" />
+        <directive name="maxCssInputSize" value="10000" />
+        <directive name="enableStyleScan" value="true" />
+        <directive name="removeComment" value="true" />
+        <directive name="elemsLower" value="true" />
+        <directive name="attrsLower" value="true" />
+        <directive name="usePurifier" value="true" />
+        <directive name="usePreXMLValid" value="true" />
+    </directives>
+    <common-regexps>
+        <regexp name="img-src-allowed" value="^http[s]{0,1}://([a-z0-9\-_]+\.)*(taobao|alipay|alibaba|yahoo|alisoft|alimama|koubei|aliimg)\.(com|net|cn|com\.cn)(/.*)*$" />
+        <regexp name="img-class-pattern" value="^img(L|R)$" />
+        <regexp name="span-pattern" value="^text-decoration: underline;$" />
+    </common-regexps>
+    <!-- 标记通用属性属性 -->
+    <tag-attributes>
+        <attributes name="h6">
+            <attribute name="class" />
+        </attributes>
+        <attributes name="empty-attributes" />
+        <attributes name="span">
+            <attribute name="style">
+                <regexp-list>
+                    <regexp name="span-pattern" />
+                </regexp-list>
+            </attribute>
+        </attributes>
+        <attributes name="img">
+            <attribute name="class">
+                <regexp-list>
+                    <regexp name="img-class-pattern" />
+                </regexp-list>
+            </attribute>
+            <attribute name="src">
+                <regexp-list>
+                    <regexp name="img-src-allowed" />
+                </regexp-list>
+            </attribute>
+            <attribute name="alt" />
+        </attributes>
+    </tag-attributes>
+    <!-- remove: remove all content include child node -->
+    <!-- accept: keep tag and ratain content -->
+    <!-- undefined: remove tag and ratain it's content -->
+    <tag-rules>
+        <!-- 不接受标签 -->
+        <tag name="script" action="remove" />
+        <tag name="noscript" action="remove" />
+        <tag name="style" action="remove" />
+        <tag name="head" action="remove" />
+        <tag name="select" action="remove" />
+        <tag name="form" action="remove" />
+        <tag name="iframe" action="remove" />
+        <tag name="frame" action="remove" />
+        <tag name="frameset" action="remove" />
+
+        <!-- 接受标签 -->
+        <tag name="h6" action="accept" attributes="h6" />
+        <tag name="strong" action="accept" attributes="empty-attributes" />
+        <tag name="em" action="accept" attributes="empty-attributes" />
+        <tag name="p" action="accept" attributes="empty-attributes" />
+        <tag name="br" action="accept" attributes="empty-attributes" />
+        <tag name="span" action="accept" attributes="span" />
+        <tag name="img" action="accept" attributes="img" />
+    </tag-rules>
+</xss>

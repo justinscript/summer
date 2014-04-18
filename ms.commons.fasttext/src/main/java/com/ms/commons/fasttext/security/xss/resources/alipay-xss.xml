@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xss>
+    <directives>
+        <directive name="maxInputSize" value="1000000" />
+        <directive name="maxCssInputSize" value="10000" />
+        <directive name="enableStyleScan" value="true" />
+        <directive name="removeComment" value="true" />
+        <directive name="elemsLower" value="false" />
+        <directive name="attrsLower" value="true" />
+        <directive name="usePurifier" value="true" />
+        <directive name="usePreXMLValid" value="true" />
+    </directives>
+    <common-regexps>
+        <regexp name="offsiteURL" value="^http[s]{0,1}://([a-z0-9\-_]+\.)*(taobao|alipay|alibaba|yahoo|alisoft|alimama|koubei|aliimg)\.(com|net|cn|com\.cn)(/.*)*$" />
+        <regexp name="commonOffsiteURL" value="(\s)*((ht|f)tp(s?)://|mailto:)[\p{L}\p{N}]+[~\p{L}\p{N}\p{Zs}\-_\.@#$%&amp;;:,\?=/\+!]*(\s)*" />
+    </common-regexps>
+    <!-- 标记通用属性属性 -->
+    <tag-attributes>
+        <attributes name="common">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+        </attributes>
+        <attributes name="style">
+            <attribute name="type" />
+        </attributes>
+        <attributes name="div">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+        </attributes>
+        <attributes name="img">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background" />
+            <attribute name="title" />
+            <attribute name="src">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="border" />
+            <attribute name="width" />
+            <attribute name="height" />
+            <attribute name="alt" />
+            <attribute name="usemap" />
+            <!-- add -->
+            <attribute name="hspace" />
+            <attribute name="ismap" />
+            <attribute name="vspace" />
+        </attributes>
+        <attributes name="font">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="color" />
+            <attribute name="size" />
+            <attribute name="face" />
+        </attributes>
+        <attributes name="table">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="border" />
+            <attribute name="width" />
+            <attribute name="height" />
+            <attribute name="cellpadding" />
+            <attribute name="cellspacing" />
+            <attribute name="bordercolor" />
+            <attribute name="blockquote" />
+            <!-- add -->
+            <attribute name="summary" />
+            <attribute name="rules" />
+        </attributes>
+        <attributes name="td">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="width" />
+            <attribute name="height" />
+            <attribute name="colspan" />
+            <attribute name="rowspan" />
+            <!-- add -->
+            <attribute name="headers" />
+            <attribute name="scope" />
+        </attributes>
+        <attributes name="marquee">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="scrollamount" />
+            <attribute name="direction" />
+            <attribute name="behavior" />
+            <attribute name="width" />
+            <attribute name="height" />
+            <attribute name="scrolldelay" />
+            <!-- add -->
+            <attribute name="loop" />
+        </attributes>
+        <attributes name="a">
+            <attribute name="style" />
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="bgcolor" />
+            <attribute name="background">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="target" />
+            <attribute name="name" />
+            <attribute name="href">
+                <regexp-list>
+                    <regexp name="commonOffsiteURL" />
+                </regexp-list>
+            </attribute>
+            <!-- add -->
+            <attribute name="charset" />
+            <attribute name="hreflang" />
+            <attribute name="type" />
+            <attribute name="shape" />
+        </attributes>
+        <attributes name="bgsound">
+            <attribute name="src">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="loop" />
+            <!-- add -->
+            <attribute name="autostart" />
+        </attributes>
+        <attributes name="map">
+            <attribute name="name" />
+            <!-- add -->
+            <attribute name="title" />
+            <attribute name="style" />
+        </attributes>
+        <attributes name="area">
+            <attribute name="shape" />
+            <attribute name="coords" />
+            <!-- add -->
+            <attribute name="href">
+                <regexp-list>
+                    <regexp name="offsiteURL" />
+                </regexp-list>
+            </attribute>
+            <attribute name="title" />
+            <attribute name="style" />
+            <attribute name="alt" />
+            <attribute name="nohref" />
+            <attribute name="target" />
+        </attributes>
+        <attributes name="spacer">
+            <attribute name="align" />
+            <attribute name="valign" />
+            <attribute name="type" />
+            <attribute name="width" />
+            <attribute name="height" />
+            <attribute name="size" />
+        </attributes>
+        <attributes name="colgroup">
+            <attribute name="align" />
+            <attribute name="char" />
+            <attribute name="charoff" />
+            <attribute name="span" />
+            <attribute name="valign" />
+            <attribute name="width" />
+            <attribute name="title" />
+            <attribute name="style" />
+        </attributes>
+    </tag-attributes>
+    <!-- remove: remove all content include child node -->
+    <!-- accept: keep tag and ratain content -->
+    <!-- undefined: remove tag and ratain it's content -->
+    <tag-rules>
+        <tag name="script" action="remove" />
+        <tag name="noscript" action="remove" />
+        <tag name="style" action="csshandler" attributes="style" />
+        <tag name="head" action="remove" />
+        <tag name="select" action="remove" />
+        <tag name="form" action="remove" />
+        <tag name="iframe" action="remove" />
+        <tag name="frame" action="remove" />
+        <tag name="frameset" action="remove" />
+        <tag name="object" action="remove" />
+        <tag name="applet" action="remove" />
+        <tag name="link" action="remove" />
+
+        <!-- 页面标签  -->
+        <tag name="a" action="accept" />
+        <tag name="hr" action="accept" attributes="common" />
+
+        <!-- 字体标签 -->
+        <tag name="h1" action="accept" attributes="common" />
+        <tag name="h3" action="accept" attributes="common" />
+        <tag name="h2" action="accept" attributes="common" />
+        <tag name="h4" action="accept" attributes="common" />
+        <tag name="h5" action="accept" attributes="common" />
+        <tag name="h6" action="accept" attributes="common" />
+        <tag name="font" action="accept" />
+        <tag name="b" action="accept" attributes="common" />
+        <tag name="i" action="accept" attributes="common" />
+        <tag name="u" action="accept" attributes="common" />
+        <tag name="sup" action="accept" attributes="common" />
+        <tag name="sub" action="accept" attributes="common" />
+        <tag name="strike" action="accept" attributes="common" />
+        <tag name="strong" action="accept" attributes="common" />
+        <tag name="em" action="accept" attributes="common" />
+
+        <!-- 文字布局标签 -->
+        <tag name="p" action="accept" attributes="common" />
+        <tag name="br" action="accept" attributes="common" />
+        <tag name="ol" action="accept" attributes="common" />
+        <tag name="li" action="accept" attributes="common" />
+        <tag name="ul" action="accept" attributes="common" />
+        <tag name="div" action="accept" />
+        <tag name="span" action="accept" attributes="common" />
+
+        <!-- 图像处理标签 -->
+        <tag name="img" action="accept" />
+        <tag name="map" action="accept" />
+        <tag name="area" action="accept" />
+
+        <!-- 动态文字标签 -->
+        <tag name="marquee" action="accept" />
+
+        <!-- 表格处理  -->
+        <tag name="table" action="accept" />
+        <tag name="tr" action="accept" attributes="td" />
+        <tag name="td" action="accept" />
+        <tag name="caption" action="accept" attributes="common" />
+
+        <!-- 多媒体处理 -->
+        <tag name="bgsound" action="accept" />
+        <tag name="blockquote" action="accept" attributes="common" />
+        <tag name="cite" action="accept" attributes="common" />
+        <!--扩展区 -->
+        <tag name="small" action="accept" attributes="common" />
+        <tag name="big" action="accept" attributes="common" />
+        <tag name="nobr" action="accept" attributes="common" />
+        <tag name="center" action="accept" attributes="common" />
+        <tag name="dl" action="accept" attributes="common" />
+        <tag name="dt" action="accept" attributes="common" />
+        <tag name="dd" action="accept" attributes="common" />
+        <tag name="pre" action="accept" attributes="common" />
+        <tag name="listing" action="accept" attributes="common" />
+        <tag name="blink" action="accept" attributes="common" />
+        <tag name="spacer" action="accept" />
+        <tag name="th" action="accept" attributes="common" />
+        <tag name="thead" action="accept" attributes="common" />
+        <tag name="tbody" action="accept" attributes="common" />
+        <tag name="tfoot" action="accept" attributes="common" />
+        <tag name="colgroup" action="accept" />
+        <tag name="col" action="accept" attributes="colgroup" />
+    </tag-rules>
+</xss>

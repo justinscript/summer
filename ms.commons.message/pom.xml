@@ -1,0 +1,81 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.ms.shared</groupId>
+	<artifactId>ms.commons.message</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+	<name>ms.commons.message</name>
+	<url>http://maven.apache.org</url>
+	
+	<parent>
+		<groupId>com.ms.base</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- 依赖的三方库 -->
+		<dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>jdbc.oracle</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.log4j</groupId>
+			<artifactId>com.springsource.org.apache.log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>org.slf4j.slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>org.slf4j.slf4j-log4j12</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>jakarta.commons.email</artifactId>
+			<version>0.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.external</groupId>
+			<artifactId>misc.mail__mail.jar</artifactId>
+			<version>0.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.activation</groupId>
+			<artifactId>activation</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- 依赖的二方库 -->
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms.shared</groupId>
+			<artifactId>ms.commons.security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+</project>

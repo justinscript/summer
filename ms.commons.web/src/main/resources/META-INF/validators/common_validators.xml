@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="required"  class="com.ms.app.web.validation.validator.RequiredValidator">
+		<property name="errorMessage" value="不能为空！"/>
+	</bean>
+	
+	<!-- 字符串长度 -->
+	<bean id="string3" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于3"/>
+		<property name="max" value="3"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string10" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于10"/>
+		<property name="max" value="10"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string21" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于21"/>
+		<property name="max" value="21"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string32" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于32"/>
+		<property name="max" value="32"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string42" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于42"/>
+		<property name="max" value="42"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string85" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于85"/>
+		<property name="max" value="85"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string170" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于170"/>
+		<property name="max" value="170"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string341" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于341"/>
+		<property name="max" value="341"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string682" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于682"/>
+		<property name="max" value="682"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string1333" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于1333"/>
+		<property name="max" value="1333"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string4000" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于4000"/>
+		<property name="max" value="4000"/>
+		<property name="min" value="1" />
+	</bean>
+	<bean id="string8000" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="长度不能大于8000"/>
+		<property name="max" value="8000"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<!-- email -->
+	<bean id="email" class="com.ms.app.web.validation.validator.EmailValidator" >
+		<property name="errorMessage" value="请输入正确的Email地址"/>
+	</bean>
+	<bean id="email.length" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="Email长度不可超过128个字符"/>
+		<!-- 检测 >= min 且 <= max -->
+		<property name="max" value="128"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<!-- 密码 -->
+	<bean id="password" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请按规定格式输入密码"/>
+		<property name="pattern" value="^\w{6,20}$"/>
+	</bean>
+	
+	<!-- 性别 -->
+	<bean id="gender" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请选择您的性别"/>
+		<property name="pattern" value="^(f|m)$"/>
+	</bean>
+	
+	<!-- 生日 -->
+	<bean id="year" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请选择正确的出生年份"/>
+		<property name="pattern" value="^(19|20)[0-9]{2}$"/>
+	</bean>
+	<bean id="month" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请选择正确的出生月份"/>
+		<property name="pattern" value="^([1-9]|1[0-2])$"/>
+	</bean>
+	<bean id="day" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请选择正确的出生日期"/>
+		<property name="pattern" value="^([1-9]|(1|2)[0-9]|30|31)$"/>
+	</bean>
+	
+	<!-- 电话 -->
+	<bean id="areaCode" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="输入3到4位区号"/>
+		<property name="pattern" value="^\d{3,4}$"/>
+	</bean>
+	<bean id="telNum" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入7到8位电话号码"/>
+		<property name="pattern" value="^\d{7,8}$"/>
+	</bean>
+	<bean id="telExt" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入1到5位分机号码"/>
+		<property name="pattern" value="^\d{1,5}$"/>
+	</bean>
+	
+	<!-- 手机 -->
+	<bean id="mobile" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入11位手机号码"/>
+		<property name="pattern" value="^1[0-9]{10}$"/>
+	</bean>
+	
+	<bean id="consignee" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请输入1到10位中文姓名"/>
+		<property name="max" value="10"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<bean id="province" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请选择正确的省份"/>
+		<property name="max" value="10"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<bean id="city" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请选择正确的城市"/>
+		<property name="max" value="10"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	
+	<bean id="district" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请选择正确的区／县"/>
+		<property name="max" value="20"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<bean id="address" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请输入1到85位详细地址"/>
+		<property name="max" value="85"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<bean id="zipcode" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入正确的邮编"/>
+		<property name="pattern" value="^\d{6}$"/>
+	</bean>
+	
+	<bean id="positiveInteger" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="必须为正整数"/>
+		<property name="pattern" value="^\+?[1-9][0-9]*$"/>
+	</bean>
+	
+	<bean id="money" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="必须为正数,最多有2位小数"/>
+		<property name="pattern" value="^[0-9]+(.[0-9]{0,2})?$"/>
+	</bean>
+</beans>
