@@ -27,7 +27,7 @@ package com.ms.commons.combiz.interfaces;
  * 
  * @see com.ms.CommonBizService.common.service.BizCommonService#transactionDoAction(CallBack)
  * 
- * @author huarong 2011-10-22 下午06:10:04
+ * @author zxc Apr 12, 2013 7:15:26 PM
  */
 public interface CallBack {
 
