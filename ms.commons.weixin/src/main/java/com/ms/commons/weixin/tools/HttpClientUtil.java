@@ -16,6 +16,7 @@ import javax.net.ssl.*;
  * Http客户端工具类<br/>
  * 这是内部调用类，请不要在外部调用。
  */
+@SuppressWarnings("rawtypes")
 public class HttpClientUtil {
 
     public static final String SunX509 = "SunX509";
@@ -120,6 +121,7 @@ public class HttpClientUtil {
      * @param pair name=value
      * @param m
      */
+    @SuppressWarnings("unchecked")
     public static void putMapByPair(String pair, Map m) {
 
         if (null == pair || "".equals(pair)) {

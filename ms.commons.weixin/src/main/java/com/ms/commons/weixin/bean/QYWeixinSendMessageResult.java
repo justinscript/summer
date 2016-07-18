@@ -62,5 +62,4 @@ public class QYWeixinSendMessageResult extends WeixinResult {
     public void setInvalidtag(String invalidtag) {
         this.invalidtag = invalidtag;
     }
-
 }

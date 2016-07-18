@@ -25,6 +25,7 @@
         <module>ms.commons.web</module>
         -->
         <module>ms.commons.weixin</module>
+        <module>ms.commons.autoconfig</module>
     </modules>
 
     <properties>

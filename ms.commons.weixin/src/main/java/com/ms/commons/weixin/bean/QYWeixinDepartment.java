@@ -43,5 +43,4 @@ public class QYWeixinDepartment extends WeixinResult {
     public String toString() {
         return "QYWeixinDepartment [department=" + department + "]";
     }
-
 }
