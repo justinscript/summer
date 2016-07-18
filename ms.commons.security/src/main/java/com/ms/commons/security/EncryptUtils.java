@@ -1,8 +1,3 @@
-/*
- * Copyright 2011-2016 ZXC.com All right reserved. This software is the confidential and proprietary information of
- * ZXC.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with ZXC.com.
- */
 package com.ms.commons.security;
 
 import java.security.SecureRandom;
@@ -15,8 +10,6 @@ import javax.crypto.spec.DESKeySpec;
 
 /**
  * 加密解密类 对于web层，一律使用comset/下的EncryptUtils
- * 
- * @author zxc Apr 12, 2013 5:26:39 PM
  */
 public class EncryptUtils {
 
@@ -28,7 +21,8 @@ public class EncryptUtils {
         }
         try {
             byte[] encryptedData = Base64.decode(secretString);
-            Security.addProvider(new com.sun.crypto.provider.SunJCE());
+            // Security.addProvider(new com.sun.crypto.provider.SunJCE());
+            Security.addProvider(new cryptix.provider.Cryptix());
             SecureRandom sr = new SecureRandom();
             byte[] rawKeyData = (new String(secretKey)).getBytes();
 
@@ -54,7 +48,8 @@ public class EncryptUtils {
         }
         try {
             byte[] decryptData = source.getBytes();
-            Security.addProvider(new com.sun.crypto.provider.SunJCE());
+            Security.addProvider(new cryptix.provider.Cryptix());
+            // Security.addProvider(new com.sun.crypto.provider.SunJCE());
             SecureRandom sr = new SecureRandom();
             byte[] rawKeyData = (new String(secretKey)).getBytes();
 

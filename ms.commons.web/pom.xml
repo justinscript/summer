@@ -16,10 +16,6 @@
 
 	<dependencies>
 		<!-- 依赖的三方库 -->
-		<dependency>
-			<groupId>commons-validator</groupId>
-			<artifactId>commons-validator</artifactId>
-		</dependency>
         <dependency>
            <groupId>org.codehaus.jackson</groupId>
            <artifactId>jackson-core</artifactId>
@@ -30,10 +26,6 @@
            <artifactId>jackson-mapper</artifactId>
            <version>1.8.5</version>
         </dependency>
-        <dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>sourceforge.spring.mock</artifactId>
-		</dependency>
         <dependency>
 			<groupId>com.ms.external</groupId>
 			<artifactId>xml.jdom</artifactId>

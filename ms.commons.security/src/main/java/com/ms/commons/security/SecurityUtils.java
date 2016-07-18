@@ -1,15 +1,7 @@
-/*
- * Copyright 2011-2016 ZXC.com All right reserved. This software is the confidential and proprietary information of
- * ZXC.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with ZXC.com.
- */
 package com.ms.commons.security;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
-/**
- * @author zxc Apr 12, 2013 5:27:30 PM
- */
 public class SecurityUtils {
 
     /**
@@ -28,6 +20,7 @@ public class SecurityUtils {
         return Base64.encode(ReturnPassword.getBytes());
     }
 
+    @SuppressWarnings("unused")
     private final static class WebmacroBase64 {
 
         private static final byte UPPER_FOUR = (byte) (16 + 32 + 64 + 128);
@@ -40,7 +33,7 @@ public class SecurityUtils {
         /**
          * Get the plain text version of a base64 encoded string
          */
-        @SuppressWarnings("unused")
+
         final static String decode(String encoded) {
             return decode(encoded.getBytes());
         }
@@ -48,7 +41,6 @@ public class SecurityUtils {
         /**
          * Get the base64 encoded version of a plain text String
          */
-        @SuppressWarnings("unused")
         final static String encode(String plainText) {
             return encode(plainText.getBytes());
         }
@@ -271,5 +263,6 @@ public class SecurityUtils {
 
             throw new NumberFormatException("Not a base64 digit: " + sixBits);
         }
+
     }
 }

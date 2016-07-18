@@ -1,16 +1,8 @@
-/*
- * Copyright 2011-2016 ZXC.com All right reserved. This software is the confidential and proprietary information of
- * ZXC.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with ZXC.com.
- */
 package com.ms.commons.security;
 
 import java.io.ByteArrayOutputStream;
 import java.util.Random;
 
-/**
- * @author zxc Apr 12, 2013 5:26:29 PM
- */
 public class Base64 {
 
     // map 6-bit int to char
@@ -34,7 +26,6 @@ public class Base64 {
         if (encoded == null || encoded.length() == 0) return null;
 
         return java.net.URLEncoder.encode(encoded);
-
     }
 
     /** Convert byte array into Base64 string */

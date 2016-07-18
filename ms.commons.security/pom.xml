@@ -11,21 +11,19 @@
 	  <artifactId>ms.commons.security</artifactId>
 	  <packaging>jar</packaging>
 	  <version>1.0.0</version>
-	  <name>commons security</name>
+	  <name>ms commons security</name>
 	  <url>http://maven.apache.org</url>
 	  
 	  <dependencies>
-	  	  	<!-- 依赖的三方库 -->
 			<dependency>
-			  	<groupId>com.ms.external</groupId>
-			  	<artifactId>java.jce.cryptix</artifactId>
+				<groupId>cryptix</groupId>
+				<artifactId>cryptix</artifactId>
+				<version>3.2.0</version>
 			</dependency>
-
-			<!-- 依赖的二方库 -->
 			<dependency>
-				<groupId>com.ms.shared</groupId>
-				<artifactId>ms.commons.core</artifactId>
-				<version>1.0.0</version>
+			    <groupId>org.bouncycastle</groupId>
+			    <artifactId>bcprov-jdk14</artifactId>
+			    <version>1.38</version>
 			</dependency>
 	  </dependencies>
 	  
