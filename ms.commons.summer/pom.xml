@@ -1,19 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ms.shared</groupId>
+	<parent>
+		<groupId>com.ms</groupId>
+		<artifactId>comm-parent</artifactId>
+		<version>1.0.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
 	<artifactId>ms.commons.summer</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<name>ms commons summer</name>
 	<url>http://maven.apache.org</url>
-
-	<parent>
-		<groupId>com.ms.base</groupId>
-		<artifactId>parent</artifactId>
-		<version>1.0.0</version>
-		<relativePath>../../base-parent</relativePath>
-	</parent>
 
 	<dependencies>
 		<!-- 依赖的三方库 -->
