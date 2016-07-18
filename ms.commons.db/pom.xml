@@ -15,15 +15,16 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>sourceforge.ibatis</artifactId>
-		</dependency>
 
 		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

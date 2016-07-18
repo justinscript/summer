@@ -5,10 +5,7 @@
  */
 package com.ms.commons.file.impl;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Map;
 
 import org.apache.commons.io.IOUtils;
@@ -272,5 +269,4 @@ public class FileServiceImpl implements FileService {
     public boolean scaleImage(String sourceFilePath, Double quality, int width, int height, String destFilePath) {
         return ImageUtil.scaleImage(sourceFilePath, width, height, destFilePath, quality);
     }
-
 }

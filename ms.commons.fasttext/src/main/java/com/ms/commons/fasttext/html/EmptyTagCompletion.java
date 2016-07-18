@@ -9,10 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
 
-import org.htmlparser.Attribute;
-import org.htmlparser.Node;
-import org.htmlparser.Parser;
-import org.htmlparser.Tag;
+import org.htmlparser.*;
 import org.htmlparser.util.NodeList;
 import org.htmlparser.util.ParserException;
 

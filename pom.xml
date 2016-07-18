@@ -11,16 +11,17 @@
     <modules>
         <module>ms.commons.core</module>
         <module>ms.commons.security</module>
+        <module>ms.commons.nisa</module>
     	<module>ms.commons.cookie</module>
-        <!--
     	<module>ms.commons.db</module>
     	<module>ms.commons.fasttext</module>
+        <module>ms.commons.summer</module>
+        
+        <!--
+        <module>ms.commons.test</module>
     	<module>ms.commons.message</module>
-    	<module>ms.commons.nisa</module>
     	<module>ms.commons.solr</module>
     	<module>ms.commons.standalone</module>
-        <module>ms.commons.summer</module>
-        <module>ms.commons.test</module>
         <module>ms.commons.udas</module>
         <module>ms.commons.web</module>
         -->
@@ -30,9 +31,13 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-        <spring.version>3.1.4.RELEASE</spring.version>
-        <slf4j.version>1.6.6</slf4j.version>
+        <maven.build.timestamp.format>yyyyMMddHH</maven.build.timestamp.format>
+        <maven.test.skip>true</maven.test.skip>
+        <downloadSources>true</downloadSources>
+        <java_source_version>1.7</java_source_version>
+        <java_target_version>1.7</java_target_version>
+        <file_encoding>UTF-8</file_encoding>
+
         <jdk.version>1.7</jdk.version>
         <junit.version>4.8.2</junit.version>
     </properties>
@@ -73,6 +78,11 @@
             <groupId>com.msun.external</groupId>
             <artifactId>java.jce.cryptix</artifactId>
             <version>0.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.msun.external</groupId>
+            <artifactId>ibatis</artifactId>
+            <version>2.3.4</version>
         </dependency>
 
         <dependency>
@@ -304,5 +314,73 @@
     </dependencies>
 		
 	<build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>${java_source_version}</source>
+                    <target>${java_target_version}</target>
+                    <encoding>${file_encoding}</encoding>
+                    <showDeprecation>false</showDeprecation>
+                    <showWarnings>true</showWarnings>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*NoRunTest.java</exclude>
+                    </excludes>
+                    <!-- <skipTests>true</skipTests> -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <includes>
+                        <include>**/*.class</include>
+                    </includes>
+                    <excludes>
+                        <exclude>**/*Test.class</exclude>
+                    </excludes>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
+
+    <distributionManagement>
+        <repository>
+            <id>SMSSDK</id>
+            <url>http://192.168.180.78:8082/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>SMSSDK</id>
+            <url>http://192.168.180.78:8082/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

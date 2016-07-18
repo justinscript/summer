@@ -15,43 +15,29 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-		<!-- 依赖的三方库 -->
 		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>org.slf4j.slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>org.slf4j.slf4j-log4j12</artifactId>
-		</dependency>
-            <dependency>
             <groupId>com.sleepycat</groupId>
             <artifactId>je</artifactId>
-            <version>4.1.10</version>
+            <version>5.0.73</version>
 		</dependency>
 		<dependency>
-			<groupId>spy</groupId>
+			<groupId>net.spy</groupId>
 			<artifactId>spymemcached</artifactId>
+			<version>2.9.0</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.log4j</groupId>
-			<artifactId>com.springsource.org.apache.log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>test.junit</artifactId>
-			<scope>test</scope>
-		</dependency>
+		
 		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.ms.shared</groupId>
-			<artifactId>ms.commons.security</artifactId>
-			<version>1.0.0</version>
+			<groupId>com.yue.shared</groupId>
+			<artifactId>yue.commons.nisa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>com.ms.shared</groupId>
-			<artifactId>ms.commons.db</artifactId>
-			<version>1.0.0</version>
-		</dependency> 
+			<groupId>com.yue.shared</groupId>
+			<artifactId>yue.commons.db</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.yue.shared</groupId>
+			<artifactId>yue.commons.core</artifactId>
+		</dependency>
 	</dependencies>
 </project>

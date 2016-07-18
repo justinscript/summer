@@ -30,4 +30,15 @@
 	  <build>
 	    <finalName>commons.security</finalName>
 	  </build>
+
+	  <distributionManagement>
+        <repository>
+            <id>SMSSDK</id>
+            <url>http://192.168.180.78:8082/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>SMSSDK</id>
+            <url>http://192.168.180.78:8082/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

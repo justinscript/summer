@@ -15,7 +15,6 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
 		<dependency>
 		    <groupId>org.apache.mina</groupId>
 		    <artifactId>mina-core</artifactId>
@@ -23,7 +22,7 @@
 		</dependency>
 		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.core</artifactId>
 			<version>1.0.0</version>
 		</dependency>

@@ -11,7 +11,7 @@
 	<artifactId>ms.commons.cookie</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
-	<name>ms.commons.cookie</name>
+	<name>ms commons cookie</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -19,10 +19,14 @@
 	</properties>
 
 	<dependencies>
-		
 		<dependency>
-			<groupId>com.ms.comm-parent</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

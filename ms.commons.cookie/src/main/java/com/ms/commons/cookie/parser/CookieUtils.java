@@ -20,8 +20,8 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ms.commons.config.interfaces.ConfigService;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.interfaces.ConfigService;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 import com.ms.commons.cookie.CookieKeyEnum;
 import com.ms.commons.security.EncryptUtils;
 
