@@ -8,10 +8,7 @@ package com.ms.commons.udas.memcached.client;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
+import java.util.concurrent.*;
 
 import net.spy.memcached.AddrUtil;
 import net.spy.memcached.MemcachedClient;
@@ -71,15 +68,15 @@ public class MockMemcachedClient extends MemcachedClient {
         }
     }
 
-    @Override
-    public Future<Boolean> set(String key, int exp, Object value) {
-        if (onlyInnerMemory) {
-            innermap.put(key, value);
-            return BooleanFuture;
-        } else {
-            return super.set(key, exp, value);
-        }
-    }
+    // @Override
+    // public Future<Boolean> set(String key, int exp, Object value) {
+    // if (onlyInnerMemory) {
+    // innermap.put(key, value);
+    // return BooleanFuture;
+    // } else {
+    // return super.set(key, exp, value);
+    // }
+    // }
 
     @Override
     public Object get(String key) {
@@ -94,13 +91,13 @@ public class MockMemcachedClient extends MemcachedClient {
         return result;
     }
 
-    @Override
-    public Future<Boolean> delete(String key) {
-        if (onlyInnerMemory) {
-            innermap.remove(key);
-            return BooleanFuture;
-        } else {
-            return super.delete(key);
-        }
-    }
+    // @Override
+    // public Future<Boolean> delete(String key) {
+    // if (onlyInnerMemory) {
+    // innermap.remove(key);
+    // return BooleanFuture;
+    // } else {
+    // return super.delete(key);
+    // }
+    // }
 }
