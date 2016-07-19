@@ -20,3 +20,4 @@ com.ms.commons提供了一个功能比较全面的summer框架及其依赖包，
 * test 测试相关支持
 * message 邮件短信支持
 * weixin 微信支付相关接口封装
+* ms-maven-plugin 基于 maven的ibatis代码自动生成插件
