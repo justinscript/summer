@@ -28,6 +28,7 @@
         <module>ms.commons.test</module>
         
         <module>ms.commons.weixin</module>
+        <module>ms-maven-plugin</module>
     </modules>
 
     <properties>
