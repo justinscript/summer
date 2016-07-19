@@ -10,7 +10,7 @@ import java.io.File;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 
 /**
  * 使用方法: 每个使用<code>RetryService</code>,必须实现{@link Retryable}接口,因为当执行重试的时候，需要回调<code>Retryable</code> 中的方法。

@@ -20,9 +20,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 
-import com.ms.commons.config.interfaces.ConfigService;
-import com.ms.commons.config.listener.ConfigListener;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.interfaces.ConfigService;
+import com.ms.commons.nisa.listener.ConfigListener;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 import com.ms.commons.log.LoggerFactoryWrapper;
 import com.ms.commons.udas.impl.UdasObj;
 import com.ms.commons.udas.interfaces.UdasService;

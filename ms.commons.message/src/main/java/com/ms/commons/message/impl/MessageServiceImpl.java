@@ -9,8 +9,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.ms.commons.config.interfaces.ConfigService;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.interfaces.ConfigService;
+import com.ms.commons.nisa.listener.ConfigListener;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 import com.ms.commons.log.ExpandLogger;
 import com.ms.commons.log.LoggerFactoryWrapper;
 import com.ms.commons.message.cons.MessageTypeEnum;

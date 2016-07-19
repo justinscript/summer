@@ -10,23 +10,24 @@
 
     <modules>
         <module>ms.commons.core</module>
-        <module>ms.commons.security</module>
+
         <module>ms.commons.nisa</module>
+        <module>ms.commons.autoconfig</module>
+        <module>ms.commons.security</module>
+        <module>ms.commons.fasttext</module>
     	<module>ms.commons.cookie</module>
     	<module>ms.commons.db</module>
-    	<module>ms.commons.fasttext</module>
+    	
         <module>ms.commons.summer</module>
-        
-        <!--
-        <module>ms.commons.test</module>
+        <module>ms.commons.web</module>
+         
     	<module>ms.commons.message</module>
     	<module>ms.commons.solr</module>
-    	<module>ms.commons.standalone</module>
         <module>ms.commons.udas</module>
-        <module>ms.commons.web</module>
-        -->
+        <module>ms.commons.standalone</module>
+        <module>ms.commons.test</module>
+        
         <module>ms.commons.weixin</module>
-        <module>ms.commons.autoconfig</module>
     </modules>
 
     <properties>
@@ -89,6 +90,11 @@
             <artifactId>htmlparser</artifactId>
             <version>0.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.msun.external</groupId>
+            <artifactId>jdbc.oracle</artifactId>
+            <version>10.2.0.2</version>
+        </dependency>
 
         <!--
         <dependency>
@@ -97,12 +103,6 @@
             <version>2.1</version>
         </dependency>
         -->
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -118,36 +118,6 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
-        </dependency>
-        
-        
-        <dependency>
-            <groupId>jdom</groupId>
-            <artifactId>jdom</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.json-lib</groupId>
-            <artifactId>json-lib</artifactId>
-            <version>2.2.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.2.2</version>
-        </dependency>
-        <!-- test -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.easymock</groupId>
-            <artifactId>easymock</artifactId>
-            <scope>test</scope>
-            <version>2.4</version>
         </dependency>
 
         <dependency>
@@ -191,6 +161,18 @@
             <version>2.5.6</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+
         <!--
         <dependency>
             <groupId>org.apache.log4j</groupId>
@@ -198,17 +180,13 @@
             <version>1.2.16</version>
         </dependency>
         -->
+        <!--
         <dependency>
-            <groupId>org.im4java</groupId>
-            <artifactId>im4java</artifactId>
-            <version>1.3.0</version>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.5</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>3.9</version>
-        </dependency>
-
+        -->
         <dependency>
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
@@ -219,13 +197,6 @@
             <artifactId>commons-validator</artifactId>
             <version>1.2.0</version>
         </dependency>
-        <!--
-        <dependency>
-            <groupId>commons-configuration</groupId>
-            <artifactId>commons-configuration</artifactId>
-            <version>1.5</version>
-        </dependency>
-        -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -268,25 +239,42 @@
         </dependency>
 
         <dependency>
+            <groupId>org.im4java</groupId>
+            <artifactId>im4java</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>3.9</version>
+        </dependency>
+        <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>1.3.1</version>
         </dependency>
 
-
+        
         <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.6.4</version>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.0</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+        </dependency>
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib-nodep</artifactId>
             <version>2.2</version>
         </dependency>
-
         <dependency>
             <groupId>aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
@@ -298,11 +286,6 @@
             <version>2.0.8</version>
         </dependency>
         <!--
-        <dependency>
-            <groupId>org.htmlparser</groupId>
-            <artifactId>htmlparser</artifactId>
-            <version>2.1</version>
-        </dependency>
         <dependency>
             <groupId>xerces</groupId>
             <artifactId>xerces</artifactId>
@@ -324,6 +307,20 @@
             <version>1.7</version>
         </dependency>
         -->
+
+        <!-- test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.easymock</groupId>
+            <artifactId>easymock</artifactId>
+            <scope>test</scope>
+            <version>2.4</version>
+        </dependency>
     </dependencies>
 		
 	<build>

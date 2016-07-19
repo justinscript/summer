@@ -18,8 +18,8 @@ import org.slf4j.Logger;
 
 import com.ms.commons.comset.filter.RecordEnum;
 import com.ms.commons.comset.filter.ResourceTools;
-import com.ms.commons.config.listener.ConfigListener;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.listener.ConfigListener;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 import com.ms.commons.log.LoggerFactoryWrapper;
 import com.ms.commons.udas.impl.handler.AbstractKVHandler;
 import com.ms.commons.udas.interfaces.UdasService;

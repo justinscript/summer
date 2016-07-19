@@ -8,9 +8,9 @@ package com.ms.app.web.commons.pagecache;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ms.commons.config.interfaces.ConfigService;
-import com.ms.commons.config.listener.ConfigListener;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.interfaces.ConfigService;
+import com.ms.commons.nisa.listener.ConfigListener;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 
 /**
  * 读取【应用】配置项，并受【应用】配置改变而改变的静态页面缓存

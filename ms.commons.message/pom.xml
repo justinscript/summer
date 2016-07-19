@@ -19,37 +19,13 @@
 	</properties>
 
 	<dependencies>
-		<!-- 依赖的三方库 -->
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>jdbc.oracle</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.log4j</groupId>
-			<artifactId>com.springsource.org.apache.log4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>org.slf4j.slf4j-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>org.slf4j.slf4j-log4j12</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>jakarta.commons.email</artifactId>
-			<version>0.0.0</version>
-		</dependency>
+		<!--
 		<dependency>
 			<groupId>com.ms.external</groupId>
 			<artifactId>misc.mail__mail.jar</artifactId>
 			<version>0.0.0</version>
 		</dependency>
+	    -->
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
@@ -58,22 +34,22 @@
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<version>1.3.3</version>
+			<version>1.4.6</version>
 		</dependency>
+
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<!-- 依赖的二方库 -->
-		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

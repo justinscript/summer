@@ -5,8 +5,9 @@
  */
 package com.ms.app.web.commons.utils;
 
-import com.ms.commons.config.interfaces.ConfigService;
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.interfaces.ConfigService;
+import com.ms.commons.nisa.listener.ConfigListener;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 
 /**
  * 这个类是代理到com.ms.commons.security.EncryptUtils类上的

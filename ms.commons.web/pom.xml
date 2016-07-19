@@ -26,38 +26,40 @@
            <artifactId>jackson-mapper</artifactId>
            <version>1.8.5</version>
         </dependency>
-        <dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>xml.jdom</artifactId>
-		</dependency>
 		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.cookie</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.security</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.db</artifactId>
 			<version>1.0.0</version>
 		</dependency> 
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.udas</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ms.shared</groupId>
+			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.summer</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 		
 	<build>
+		
 	</build>
 </project>

@@ -28,16 +28,19 @@
 		
 		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.yue.shared</groupId>
-			<artifactId>yue.commons.nisa</artifactId>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yue.shared</groupId>
-			<artifactId>yue.commons.db</artifactId>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.db</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.yue.shared</groupId>
-			<artifactId>yue.commons.core</artifactId>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.core</artifactId>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 </project>

@@ -26,7 +26,7 @@ import org.apache.solr.client.solrj.response.CoreAdminResponse;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 
-import com.ms.commons.config.service.ConfigServiceLocator;
+import com.ms.commons.nisa.service.ConfigServiceLocator;
 import com.ms.commons.result.Result;
 import com.ms.scombiz.solr.service.SolrServerUnAvailableException;
 import com.ms.scombiz.solr.utils.BaseSolrQueryConvert;
