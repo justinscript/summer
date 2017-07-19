@@ -6,12 +6,7 @@
 package com.ms.commons.summer.core.context;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
@@ -121,11 +116,6 @@ public class SummerApplicationContext extends XmlWebApplicationContext {
         return rss;
     }
 
-    /*
-     * (non-Javadoc)
-     * @seeorg.springframework.web.context.support.XmlWebApplicationContext# loadBeanDefinitions
-     * (org.springframework.beans.factory.support.DefaultListableBeanFactory)
-     */
     protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) throws IOException {
         // Create a new XmlBeanDefinitionReader for the given BeanFactory.
         XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
@@ -160,26 +150,16 @@ public class SummerApplicationContext extends XmlWebApplicationContext {
         return new String[] {};
     }
 
-    /*
-     * (non-Javadoc)
-     * @see org.springframework.context.support.AbstractRefreshableApplicationContext #createBeanFactory()
-     */
     protected DefaultListableBeanFactory createBeanFactory() {
         return new OverrideableBeanFactory(getInternalParentBeanFactory());
     }
 
-    /*
-     * (non-Javadoc) @seeorg.springframework.web.context.support. AbstractRefreshableWebApplicationContext
-     * #getResourceByPath(java.lang.String)
-     */
     protected Resource getResourceByPath(String path) {
         try {
             Resource resource = super.getResourceByPath(path);
             if (resource != null && !resource.exists()) {
                 Resource _resource = this.springConfigs.get(path);
-                if (_resource != null) {
-                    resource = _resource;
-                }
+                if (_resource != null) resource = _resource;
             }
             return resource;
         } catch (Exception e) {

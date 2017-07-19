@@ -17,11 +17,6 @@ import org.w3c.dom.Element;
  */
 public class OverrideableBeanDefinitionDocumentReader extends DefaultBeanDefinitionDocumentReader {
 
-    /*
-     * (non-Javadoc)
-     * @see org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader
-     * #createHelper(org.springframework.beans.factory.xml.XmlReaderContext, org.w3c.dom.Element)
-     */
     protected BeanDefinitionParserDelegate createHelper(XmlReaderContext readerContext, Element root) {
         OverrideableBeanDefinitionParserDelegate delegate = new OverrideableBeanDefinitionParserDelegate(readerContext);
         delegate.initDefaults(root);

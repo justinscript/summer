@@ -28,20 +28,14 @@ public class OverrideableBeanFactory extends DefaultListableBeanFactory {
         super(parentBeanFactory);
     }
 
-    /*
-     * (non-Javadoc)
-     * @see org.springframework.beans.factory.support.DefaultListableBeanFactory#
-     * registerBeanDefinition(java.lang.String, org.springframework.beans.factory.config.BeanDefinition)
-     */
-    public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
-                                                                                      throws BeanDefinitionStoreException {
-
+    public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition) throws BeanDefinitionStoreException {
         String beanClassName = beanDefinition.getBeanClassName();
         BeanDefinition oldBeanDefinition = null;
         try {
             // 尝试查找当前的bean是否已经注册过
             oldBeanDefinition = this.getBeanDefinition(beanName);
         } catch (NoSuchBeanDefinitionException e) {
+
         }
 
         // 如果当前的bean已经被定义，使用当前的新配置来覆盖原始的定义
