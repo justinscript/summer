@@ -1,33 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ms</groupId>
-	<artifactId>comm-parent</artifactId>
+	<groupId>io.msun.shared</groupId>
+	<artifactId>ms-parent</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0.0</version>
 	<name>ms commons base</name>
 	<url>http://maven.apache.org</url>
 
 	<modules>
-		<module>ms.commons.core</module>
+		<module>ms.core</module>
 
-		<module>ms.commons.nisa</module>
-		<module>ms.commons.autoconfig</module>
-		<module>ms.commons.security</module>
-		<module>ms.commons.fasttext</module>
-		<module>ms.commons.cookie</module>
-		<module>ms.commons.db</module>
+		<module>ms.nisa</module>
+		<module>ms.autoconfig</module>
+		<module>ms.security</module>
+		<module>ms.fasttext</module>
+		<module>ms.cookie</module>
+		<module>ms.db</module>
 
-		<module>ms.commons.summer</module>
-		<module>ms.commons.web</module>
+		<module>ms.summer</module>
+		<module>ms.web</module>
 
-		<module>ms.commons.message</module>
-		<module>ms.commons.solr</module>
-		<module>ms.commons.udas</module>
-		<module>ms.commons.standalone</module>
-		<module>ms.commons.test</module>
+		<module>ms.message</module>
+		<module>ms.solr</module>
+		<module>ms.udas</module>
+		<module>ms.standalone</module>
+		<module>ms.test</module>
 
-		<module>ms.commons.weixin</module>
+		<module>ms.weixin</module>
 		<module>ms-maven-plugin</module>
 	</modules>
 

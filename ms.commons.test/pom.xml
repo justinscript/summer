@@ -2,13 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ms</groupId>
-		<artifactId>comm-parent</artifactId>
+		<groupId>io.msun.shared</groupId>
+		<artifactId>ms-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>ms.commons.test</artifactId>
+	<artifactId>ms.test</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
 	<name>MSUN Test Framework</name>
@@ -20,6 +20,22 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.security</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.db</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 		<!-- 依赖的三方库 -->
 		<dependency>
 			<groupId>dom4j</groupId>
@@ -66,30 +82,11 @@
 			<artifactId>jsqlparser</artifactId>
 			<version>0.8.0</version>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.34</version>
 			<type>jar</type>
-		</dependency>
-
-
-		<!-- 依赖的二方库 -->
-		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.security</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.db</artifactId>
-			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 	<build>

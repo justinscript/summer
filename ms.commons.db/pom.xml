@@ -2,29 +2,27 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ms</groupId>
-		<artifactId>comm-parent</artifactId>
+		<groupId>io.msun.shared</groupId>
+		<artifactId>ms-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>ms.commons.db</artifactId>
+	<artifactId>ms.db</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>ms commons db</name>
+	<name>ms db</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
-		<!-- 依赖的二方库 -->
 		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.core</artifactId>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.nisa</artifactId>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.nisa</artifactId>
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>

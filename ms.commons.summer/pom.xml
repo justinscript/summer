@@ -2,19 +2,30 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ms</groupId>
-		<artifactId>comm-parent</artifactId>
+		<groupId>io.msun.shared</groupId>
+		<artifactId>ms-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>ms.commons.summer</artifactId>
+	<artifactId>ms.summer</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>ms commons summer</name>
+	<name>ms summer</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
+		<dependency>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.msun.shared</groupId>
+			<artifactId>ms.fasttext</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
 		<!-- 依赖的三方库 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -52,20 +63,9 @@
 			<artifactId>velocity-tools</artifactId>
 			<version>1.4</version>
 		</dependency>
-		<!-- 依赖的二方库 -->
-		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.core</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.ms</groupId>
-			<artifactId>ms.commons.fasttext</artifactId>
-			<version>1.0.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>commons.summer</finalName>
+		<finalName>ms.summer</finalName>
 	</build>
 </project>

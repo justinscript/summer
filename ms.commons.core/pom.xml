@@ -2,16 +2,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>com.ms</groupId>
-		<artifactId>comm-parent</artifactId>
+		<groupId>io.msun.shared</groupId>
+		<artifactId>ms-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<artifactId>ms.commons.core</artifactId>
+	<artifactId>ms.core</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
-	<name>ms commons core</name>
+	<name>ms core</name>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
