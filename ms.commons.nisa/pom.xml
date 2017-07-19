@@ -6,7 +6,7 @@
 		<artifactId>comm-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
-	  </parent>
+	</parent>
 
 	<artifactId>ms.commons.nisa</artifactId>
 	<packaging>jar</packaging>
@@ -16,9 +16,9 @@
 
 	<dependencies>
 		<dependency>
-		    <groupId>org.apache.mina</groupId>
-		    <artifactId>mina-core</artifactId>
-		    <version>2.0.4</version>
+			<groupId>org.apache.mina</groupId>
+			<artifactId>mina-core</artifactId>
+			<version>2.0.4</version>
 		</dependency>
 		<!-- 依赖的二方库 -->
 		<dependency>
@@ -27,7 +27,7 @@
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>commons.nisa.test</finalName>
 	</build>

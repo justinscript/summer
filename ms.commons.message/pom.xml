@@ -19,13 +19,8 @@
 	</properties>
 
 	<dependencies>
-		<!--
-		<dependency>
-			<groupId>com.ms.external</groupId>
-			<artifactId>misc.mail__mail.jar</artifactId>
-			<version>0.0.0</version>
-		</dependency>
-	    -->
+		<!-- <dependency> <groupId>com.ms.external</groupId> <artifactId>misc.mail__mail.jar</artifactId> 
+			<version>0.0.0</version> </dependency> -->
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>

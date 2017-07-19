@@ -14,6 +14,7 @@ public final class CookieMaxAge {
      * 用于临时Cookie的MaxAge
      */
     public static final int TEMP        = -1;
+
     /**
      * 用于永久Cookie的MaxAge
      */

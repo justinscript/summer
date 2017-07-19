@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.core</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -16,20 +16,9 @@
 
 	<dependencies>
 		<dependency>
-		  <groupId>org.jsoup</groupId>
-		  <artifactId>jsoup</artifactId>
-		  <version>1.7.2</version>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.7.2</version>
 		</dependency>
 	</dependencies>
-
-	<distributionManagement>
-        <repository>
-            <id>SMSSDK</id>
-            <url>http://192.168.180.78:8082/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>SMSSDK</id>
-            <url>http://192.168.180.78:8082/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>

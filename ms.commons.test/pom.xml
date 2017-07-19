@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.test</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -22,10 +22,10 @@
 	<dependencies>
 		<!-- 依赖的三方库 -->
 		<dependency>
-    <groupId>dom4j</groupId>
-    <artifactId>dom4j</artifactId>
-    <version>1.5</version>
-</dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.5</version>
+		</dependency>
 		<dependency>
 			<groupId>mockit</groupId>
 			<artifactId>jmockit</artifactId>
@@ -46,7 +46,7 @@
 			<artifactId>jdom</artifactId>
 			<version>1.0</version>
 		</dependency>
-		 <dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-mock</artifactId>
 			<version>2.0.1</version>
@@ -68,11 +68,11 @@
 		</dependency>
 
 		<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.34</version>
-            <type>jar</type>
-        </dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.34</version>
+			<type>jar</type>
+		</dependency>
 
 
 		<!-- 依赖的二方库 -->
@@ -107,7 +107,7 @@
 			<resource>
 				<directory>src/java</directory>
 				<excludes>
-				<exclude>**/*.java</exclude>
+					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
 		</resources>

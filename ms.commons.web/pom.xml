@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.web</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -16,16 +16,16 @@
 
 	<dependencies>
 		<!-- 依赖的三方库 -->
-        <dependency>
-           <groupId>org.codehaus.jackson</groupId>
-           <artifactId>jackson-core</artifactId>
-           <version>1.8.5</version>
-        </dependency>
-        <dependency>
-           <groupId>org.codehaus.jackson</groupId>
-           <artifactId>jackson-mapper</artifactId>
-           <version>1.8.5</version>
-        </dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper</artifactId>
+			<version>1.8.5</version>
+		</dependency>
 		<!-- 依赖的二方库 -->
 		<dependency>
 			<groupId>com.ms</groupId>
@@ -41,7 +41,7 @@
 			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.db</artifactId>
 			<version>1.0.0</version>
-		</dependency> 
+		</dependency>
 		<dependency>
 			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.udas</artifactId>
@@ -58,8 +58,8 @@
 			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
-		
+
 	<build>
-		
+
 	</build>
 </project>

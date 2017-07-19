@@ -31,9 +31,7 @@ public enum CookieDomain {
 
     public static CookieDomain getEnum(String domain) {
         for (CookieDomain cookieDomain : values()) {
-            if (cookieDomain.getDomain().equals(domain)) {
-                return cookieDomain;
-            }
+            if (cookieDomain.getDomain().equals(domain)) return cookieDomain;
         }
         return null;
     }

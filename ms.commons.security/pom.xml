@@ -1,44 +1,33 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	  <modelVersion>4.0.0</modelVersion>
-	  <parent>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
 		<groupId>com.ms</groupId>
 		<artifactId>comm-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
-	  </parent>
+	</parent>
 
-	  <artifactId>ms.commons.security</artifactId>
-	  <packaging>jar</packaging>
-	  <version>1.0.0</version>
-	  <name>ms commons security</name>
-	  <url>http://maven.apache.org</url>
-	  
-	  <dependencies>
-			<dependency>
-				<groupId>cryptix</groupId>
-				<artifactId>cryptix</artifactId>
-				<version>3.2.0</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.bouncycastle</groupId>
-			    <artifactId>bcprov-jdk14</artifactId>
-			    <version>1.38</version>
-			</dependency>
-	  </dependencies>
-	  
-	  <build>
-	    <finalName>commons.security</finalName>
-	  </build>
+	<artifactId>ms.commons.security</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+	<name>ms commons security</name>
+	<url>http://maven.apache.org</url>
 
-	  <distributionManagement>
-        <repository>
-            <id>SMSSDK</id>
-            <url>http://192.168.180.78:8082/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>SMSSDK</id>
-            <url>http://192.168.180.78:8082/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<dependencies>
+		<dependency>
+			<groupId>cryptix</groupId>
+			<artifactId>cryptix</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk14</artifactId>
+			<version>1.38</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>commons.security</finalName>
+	</build>
 </project>

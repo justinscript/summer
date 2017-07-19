@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.standalone</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -15,13 +15,12 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-
-        <dependency>
-            <groupId>org.quartz-scheduler</groupId>
-            <artifactId>quartz</artifactId>
-            <version>2.1.6</version>
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.1.6</version>
 		</dependency>
-    	<!-- 依赖的二方库 -->
+		<!-- 依赖的二方库 -->
 		<dependency>
 			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.core</artifactId>

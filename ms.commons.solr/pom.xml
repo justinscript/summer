@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.solr</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -15,44 +15,44 @@
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
-        <dependency>
-            <groupId>org.apache.solr</groupId>
-            <artifactId>solr-solrj</artifactId>
-            <version>4.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-analyzers-common</artifactId>
-            <version>4.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-core</artifactId>
-            <version>4.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcomponents-core</artifactId>
-            <version>4.2.4</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpmime</artifactId>
-            <version>4.2.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.noggit</groupId>
-            <artifactId>noggit</artifactId>
-            <version>0.5</version>
-        </dependency>
-        <!-- 依赖的二方库 -->
-        <dependency>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-analyzers-common</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-core</artifactId>
+			<version>4.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcomponents-core</artifactId>
+			<version>4.2.4</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.noggit</groupId>
+			<artifactId>noggit</artifactId>
+			<version>0.5</version>
+		</dependency>
+		<!-- 依赖的二方库 -->
+		<dependency>
 			<groupId>com.ms</groupId>
 			<artifactId>ms.commons.core</artifactId>
 			<version>1.0.0</version>
@@ -62,10 +62,10 @@
 			<artifactId>ms.commons.security</artifactId>
 			<version>1.0.0</version>
 		</dependency>
-        <dependency>
-            <groupId>com.ms</groupId>
-            <artifactId>ms.commons.nisa</artifactId>
-            <version>1.0.0</version>
-        </dependency>
+		<dependency>
+			<groupId>com.ms</groupId>
+			<artifactId>ms.commons.nisa</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 </project>

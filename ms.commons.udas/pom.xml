@@ -7,7 +7,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>ms.commons.udas</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0.0</version>
@@ -16,16 +16,16 @@
 
 	<dependencies>
 		<dependency>
-            <groupId>com.sleepycat</groupId>
-            <artifactId>je</artifactId>
-            <version>5.0.73</version>
+			<groupId>com.sleepycat</groupId>
+			<artifactId>je</artifactId>
+			<version>5.0.73</version>
 		</dependency>
 		<dependency>
 			<groupId>net.spy</groupId>
 			<artifactId>spymemcached</artifactId>
 			<version>2.9.0</version>
 		</dependency>
-		
+
 		<!-- 依赖的二方库 -->
 		<dependency>
 			<groupId>com.ms</groupId>
