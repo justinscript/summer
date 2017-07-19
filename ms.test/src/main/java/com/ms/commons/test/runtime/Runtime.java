@@ -1,7 +1,7 @@
 /*
- * Copyright 2011-2016 ZXC.com All riimport com.ms.commons.test.runtime.constant.RuntimeEnvironment; nformation of
- * ZXC.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in
- * accordance with the terms of the license agreement you entered into with ZXC.com.
+ * Copyright 2017-2025 msun.com All riimport com.ms.commons.test.runtime.constant.RuntimeEnvironment; nformation of
+ * msun.com ("Confidential Information"). You shall not disclose such Confidential Information and shall use it only in
+ * accordance with the terms of the license agreement you entered into with msun.com.
  */
 package com.ms.commons.test.runtime;
 

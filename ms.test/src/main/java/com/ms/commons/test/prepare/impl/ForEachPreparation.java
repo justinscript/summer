@@ -1,7 +1,7 @@
 /*
- * Copyright 2011-2016 ZXC.com All right import java.util.ArrayList; import java.util.Arrays; import java.util.List;
+ * Copyright 2017-2025 msun.com All right import java.util.ArrayList; import java.util.Arrays; import java.util.List;
  * import java.util.concurrent.atomic.AtomicInteger; import com.ms.commons.test.prepare.Preparation; ll use it only in
- * accordance with the terms of the license agreement you entered into with ZXC.com.
+ * accordance with the terms of the license agreement you entered into with msun.com.
  */
 package com.ms.commons.test.prepare.impl;
 

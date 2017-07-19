@@ -1,7 +1,7 @@
 /*
- * Copyright 2011-2016 ZXC.com All rigimport java.util.HashMap; import java.util.Map; import java.util.Set; import
+ * Copyright 2017-2025 msun.com All rigimport java.util.HashMap; import java.util.Map; import java.util.Set; import
  * org.apache.mina.util.ConcurrentHashSet; import com.ms.commons.comset.filter.info.LeafInfo; import
- * com.ms.commons.log.ExpandLogger; import com.ms.commons.log.LoggerFactoryWrapper; ered into with ZXC.com.
+ * com.ms.commons.log.ExpandLogger; import com.ms.commons.log.LoggerFactoryWrapper; ered into with msun.com.
  */
 package com.ms.commons.comset.filter;
 
