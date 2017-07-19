@@ -1,8 +1,8 @@
-com.ms.commons
+io.msun.summer
 ==============
 ### java服务器端常用工具库
 
-com.ms.commons提供了一个功能比较全面的summer框架及其依赖包，
+提供了一个功能比较全面的summer框架及其依赖包，
 同时放了webSiteDemo工程的依赖包，
 也是一个web工程必备的常用包;
 
