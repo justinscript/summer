@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<config description="自动配置�.ms.framework-test">
+	<group name=.ms.framework-test">
+	</group>
+	<script>
+		<generate template="syslog_client_services_locator.xml.vm" destfile="biz/syslog_client_services_locator.xml" charset="GBK" />
+	</script>
+</config>

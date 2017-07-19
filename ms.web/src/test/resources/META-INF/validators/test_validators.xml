@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<bean id="test.required"  class="com.ms.app.web.validation.validator.RequiredValidator">
+		<property name="errorMessage" value="不能为空！"/>
+	</bean>
+	<!-- MemberDO 校验 -->
+	<bean id="test.email" class="com.ms.app.web.validation.validator.EmailValidator" >
+		<property name="errorMessage" value="输入的Email非法"/>
+	</bean>
+	<bean id="test.email.length" class="com.ms.app.web.validation.validator.StringLength" >
+		<property name="errorMessage" value="请输入0到128位Email地址!"/>
+		<!-- 检测 >= min 且 <= max -->
+		<property name="max" value="128"/>
+		<property name="min" value="1" />
+	</bean>
+	
+	<bean id="test.password" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入6－20位字母或者数字"/>
+		<property name="pattern" value="^\w{6,20}$"/>
+	</bean>
+	
+	<!-- 手机 -->
+	<bean id="mobile" class="com.ms.app.web.validation.validator.RegexpValidator" >
+		<property name="errorMessage" value="请输入11位手机号码"/>
+		<property name="pattern" value="^1[0-9]{10}$"/>
+	</bean>
+	
+	
+</beans>

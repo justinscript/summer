@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" threshold="null" debug="null">
+    
+    <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+   <layout class="org.apache.log4j.PatternLayout">
+    <param name="ConversionPattern"
+     value="%-4r [%t] %-5p %c %x - %m%n" />
+   </layout>
+   <filter class="org.apache.log4j.varia.LevelRangeFilter">
+    <param name="LevelMin" value="DEBUG" />
+    <param name="LevelMax" value="DEBUG" />
+   </filter>
+	</appender> 
+   
+     <logger name="com.ms" additivity="false">  
+         <level value="error" />
+         <appender-ref ref="CONSOLE"/>
+     </logger>
+     <logger name="org.apache" additivity="false">  
+         <level value="error" />
+         <appender-ref ref="CONSOLE"/>
+     </logger>
+       
+   <!-- ===================================================================== -->
+    <!-- ===================================================================== -->
+    <root>
+        <level value="error"/>
+        <appender-ref ref="CONSOLE"/>
+    </root>
+</log4j:configuration>

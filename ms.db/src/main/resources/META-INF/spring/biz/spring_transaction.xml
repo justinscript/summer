@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <import resource="spring_datasource.xml" />
+    <bean id="txAttributeSource" class="org.springframework.transaction.interceptor.NameMatchTransactionAttributeSource">
+        <property name="properties">
+            <props>
+                <prop key="update*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="modify*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="insert*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="save*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="create*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="delete*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="remove*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="move*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="post*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="repost*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="disable*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="reorder*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="recover*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="repost*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="add*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="replace*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="register*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="bind*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="batchUpdate*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+                <prop key="transaction*">PROPAGATION_REQUIRED,-RollbackableException</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="transactionDefinition" class="com.ms.commons.db.jdbc.transaction.interceptor.YueTransactionProxyFactoryBean" abstract="true">
+        <property name="transactionManager">
+            <ref bean="transactionManagerProxy" />
+        </property>
+        <property name="proxyTargetClass" value="true" />
+        <property name="transactionAttributeSource">
+            <ref bean="txAttributeSource" />
+        </property>
+    </bean>
+    
+
+	<!-- -->
+    <bean id="performanceThresholdMonitor" class="com.ms.commons.db.jdbc.PerformanceThresholdMonitor" lazy-init="default" autowire="default" dependency-check="default">
+      <property name="threshold">
+        <value>1000</value>
+      </property>
+    </bean>
+	<!-- ==============transactionManager interception for systemLog ======================-->
+	<bean id="transactionManagerInterceptor"  class="com.ms.commons.db.jdbc.aop.TransactionManagerInterceptor"/>
+	<bean id="transactionManagerProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyTargetClass"><value>true</value></property>
+	    <property name="target"><ref bean="transactionManager"/></property>
+	    <property name="interceptorNames">
+	        <list>
+	            <value>transactionManagerInterceptor</value>
+	        </list>
+	    </property>
+	</bean>
+</beans>
