@@ -89,8 +89,7 @@ public class SummerApplicationContext extends XmlWebApplicationContext {
         }
 
         // summer的缺省配置文件
-        Resource[] summerResources = resourcePatternResolver.getResources(ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX
-                                                                          + summerConfigFileName);
+        Resource[] summerResources = resourcePatternResolver.getResources(ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + summerConfigFileName);
         if (summerResources == null || summerResources.length < 1) {
             throw new RuntimeException(summerConfigFileName + "文件丢失");
         }
@@ -99,8 +98,7 @@ public class SummerApplicationContext extends XmlWebApplicationContext {
         // 用户的配置文件路径
         String userConfigLocationPattern = System.getProperty(SPRING_CONFIG_LOCATION_PATTERN);
         if (userConfigLocationPattern == null || userConfigLocationPattern.trim().equals("")) {
-            userConfigLocationPattern = ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + SPRING_CONFIG_PATH_PREFIX
-                                        + "*.xml";
+            userConfigLocationPattern = ResourcePatternResolver.CLASSPATH_ALL_URL_PREFIX + SPRING_CONFIG_PATH_PREFIX + "*.xml";
             if (logger.isDebugEnabled()) {
                 logger.debug("user default user config file pattern : " + userConfigLocationPattern);
             }

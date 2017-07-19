@@ -83,9 +83,7 @@ public class DetectDefinedChar {
     public boolean hasProhibitChar(char cs[]) {
         if (cs != null) {
             for (char c : cs) {
-                if (isProhibitChar(c)) {
-                    return true;
-                }
+                if (isProhibitChar(c)) return true;
             }
         }
         return false;
@@ -94,12 +92,9 @@ public class DetectDefinedChar {
     public boolean hasProhibitChar(String str) {
         if (str != null) {
             for (int i = 0; i < str.length(); i++) {
-                if (isProhibitChar(str.charAt(i))) {
-                    return true;
-                }
+                if (isProhibitChar(str.charAt(i))) return true;
             }
         }
         return false;
     }
-
 }
