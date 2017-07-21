@@ -30,8 +30,7 @@ public class DefaultSecurityFormResolver {
      * @param request
      * @param str
      */
-    public void renderSessionTokenInput(final HttpServletRequest request, final HttpServletResponse response,
-                                        final StringBuilder str) {
+    public void renderSessionTokenInput(final HttpServletRequest request, final HttpServletResponse response, final StringBuilder str) {
         String token = createToken();
         Cookie cookie = new Cookie(FORM_RESUBMIT_TOKEN, token);
         cookie.setPath("/");
@@ -49,8 +48,7 @@ public class DefaultSecurityFormResolver {
      * @param response
      * @throws InvalidTokenException
      */
-    public void validSessionToken(final HttpServletRequest request, final HttpServletResponse response)
-                                                                                                       throws InvalidTokenException {
+    public void validSessionToken(final HttpServletRequest request, final HttpServletResponse response) throws InvalidTokenException {
         Cookie[] cookies = request.getCookies();
         String ctoken = null;
         if (cookies != null) {
@@ -99,8 +97,7 @@ public class DefaultSecurityFormResolver {
      * @param response
      * @throws InvalidTokenException
      */
-    public void validCSRFToken(final HttpServletRequest request, final HttpServletResponse response)
-                                                                                                    throws InvalidTokenException {
+    public void validCSRFToken(final HttpServletRequest request, final HttpServletResponse response) throws InvalidTokenException {
         Cookie[] cookies = request.getCookies();
         String ctoken = null;
         if (cookies != null) {
@@ -127,5 +124,4 @@ public class DefaultSecurityFormResolver {
         byte[] bs = Base64.encodeBase64(("" + System.nanoTime()).getBytes());
         return new String(bs);
     }
-
 }
