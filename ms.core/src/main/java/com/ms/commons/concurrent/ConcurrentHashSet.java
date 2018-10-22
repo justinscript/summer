@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 /**
+ * 并发set ConcurrentHashSet
  * @author zxc Apr 12, 2013 11:56:54 PM
  */
 public class ConcurrentHashSet<E> extends MapBackedSet<E> {
