@@ -69,9 +69,9 @@
 			<url>http://repo1.maven.org/maven2/</url>
 		</repository>
 		<repository>
-			<id>Lawrence-zxc-maven-repo</id>
-			<name>Lawrence-zxc github repo</name>
-			<url>https://raw.githubusercontent.com/Lawrence-zxc/maven-repo/master/repository</url>
+			<id>justinscript-maven-repo</id>
+			<name>justinscript github repo</name>
+			<url>https://raw.githubusercontent.com/justinscript/maven-repo/master/repository</url>
 		</repository>
 	</repositories>
 
@@ -352,15 +352,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<distributionManagement>
-		<repository>
-			<id>SMSSDK</id>
-			<url>http://10.18.98.239:8081/nexus/content/repositories/releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>SMSSDK</id>
-			<url>http://10.18.98.239:8081/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
 </project>
